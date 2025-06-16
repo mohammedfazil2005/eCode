@@ -1,0 +1,39 @@
+body{
+    background: #10242e;
+background: linear-gradient(90deg, rgba(16, 36, 46, 1) 100%, rgba(10, 2, 2, 1) 100%, rgba(0, 0, 0, 1) 62%);
+}
+
+nav ul li{
+    color: white;
+    
+}
+
+.nav-link-tag{
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #fff;
+    font-size: 14px;
+}
+.nav-link-tag:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+#logo-png{
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.btn-nav{
+    padding: 8px 10px;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    font-size: 14px;
+}
+.btn-nav:hover{
+    background-color: white;
+    color: black;
+}
