@@ -324,11 +324,13 @@ AAAAA
 
     const [currentPage, setCurrentPage] = useState(1)
 
-    const perPage = 8
+    const perPage = 7
     const totalPage = Math.ceil(allPatterns.length / perPage)
 
     let lastIndex = currentPage * perPage
     let firstIndex = lastIndex - perPage
+    let slicedArray = data?.slice(firstIndex, lastIndex)
+
 
 
     const forwardClick = () => {
@@ -347,23 +349,24 @@ AAAAA
     }
 
     useEffect(() => {
-        if(data)
         setData(allPatterns)
     }, [])
-    let slicedArray = data?.slice(firstIndex, lastIndex)
+
+    
 
     return (
         <div>
            
     <>
-    <div className='btn-option-div'>
+    {slicedArray.length>0?  <div className='btn-option-div'>
                 <button onClick={()=>setBoxVal("questions")}>View Interview questions <i class="fa-solid fa-arrow-right"></i></button>
             </div>
-            
-            {slice.length > 0 ?( slicedArray.map((a) => (
-                <Accordion className="custom-accordion">
+            :""}
+  
+            {slicedArray.length > 0 ?( slicedArray.map((a) => (
+                <Accordion className="custom-accordion mb-3">
                     <Accordion.Item eventKey={a.id}>
-                        <Accordion.Header>{a.name} <img id='img-pattern' src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="" /></Accordion.Header>
+                        <Accordion.Header><p>{a.name} </p><img id='img-pattern' src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="" /></Accordion.Header>
                         <Accordion.Body>
                             <Editor
                                 height="200px"
@@ -378,13 +381,14 @@ AAAAA
                 </Accordion>
             )) ): ""}
             
-
+            {slicedArray.length>0?
             <div className='arrow-btn-div'>
                 <button onClick={onBackWardClick}><i class="fa-solid fa-arrow-left"></i></button>
                 <h6><span>{currentPage}</span> of <span>{totalPage}</span></h6>
                 <button onClick={forwardClick}><i class="fa-solid fa-arrow-right"></i></button>
 
-            </div></>
+            </div>:""}
+            </>
            
         </div>
     )

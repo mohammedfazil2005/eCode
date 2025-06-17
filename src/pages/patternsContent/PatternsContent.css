@@ -3,6 +3,7 @@
     justify-content: space-around;
     flex-wrap: wrap ;
     gap: 10px;
+    margin-top: 40px;
 
 }
 
@@ -10,8 +11,8 @@
     display: flex;
     flex-direction: column;
     color: white;
-    border: 2px solid rgba(211, 211, 211, 0.337);
-    box-shadow: 0px 2px 3px #1e2227;
+    border: 1px solid rgba(211, 211, 211, 0.337);
+    box-shadow: 0px 2px 5px #1e2227;
     min-height: 50vh;
     padding: 10px;
     align-items: center;
@@ -45,7 +46,7 @@
    align-items: center;
    background-color: transparent;
    margin-top: 10px;
-    padding: 5px;
+   padding: 10px 10px;
     color: white;
     border-radius: 10px;
     font-size: 14px;
@@ -53,28 +54,50 @@
     text-transform: lowercase;
     letter-spacing: 1px;
     font-family: cursive;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.patterns-content-parent div button:hover{
+    border: 1px solid rgba(255, 255, 0, 0.464);
 }
 .patterns-content-parent div button img{
     width: 15px;
     height: 15px;
+    margin-top: 4px;
    
     
 }
 
 
 .custom-accordion .accordion-button,
-.custom-accordion .accordion-item,
+/* .custom-accordion .accordion-item, */
 .custom-accordion .accordion-header {
   background-color: #1e2227;
   color: #fff;
-  letter-spacing: 1px;
-  border: 1px solid rgba(211, 211, 211, 0.873);
+  letter-spacing: 0.2px;
+   /* background: #10242e;
+background: linear-gradient(90deg, rgba(16, 36, 46, 1) 100%, rgba(10, 2, 2, 1) 100%, rgba(0, 0, 0, 1) 62%); */
+border-radius: 10px;
   
+}
+
+.custom-accordion .accordion-header p{
+    text-transform: uppercase;
+    font-weight: 200;
+ 
+    font-size: 14px;
+}
+
+.custom-accordion .accordion-item{
+     background-color: #1e2227b2;
+     color: white;
 }
 
 
 #img-pattern{
     width: 20px;
+
     height: 20px;
 }
 
@@ -124,4 +147,14 @@
 }
 .btn-option-div button:hover{
     border: 1px solid yellow;
+}
+
+ .custom-accordion .accordion-button::after {
+  filter: invert(40%) sepia(100%) saturate(600%) hue-rotate(180deg);
+  /* display: none; */
+}
+
+/* When expanded (not collapsed) */
+.custom-accordion .accordion-button:not(.collapsed)::after {
+  filter: invert(100%) sepia(50%) saturate(500%) hue-rotate(90deg);
 }

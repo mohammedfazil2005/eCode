@@ -1,6 +1,6 @@
 .footer-parent{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
     align-items: center;
     margin-top: 60PX;
 }
@@ -11,7 +11,7 @@
     color: white;
 }
 
-.footer-left div{
+.input-footer-div{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -19,9 +19,9 @@
     
 }
 
-.footer-left div input,textarea{
+.input-footer-div input,textarea{
     background-color: transparent;
-    width: 600px;
+    width: 700px;
     border: 1px solid rgba(211, 211, 211, 0.204);
     border-radius: 10px;
     padding: 7px;
@@ -43,17 +43,28 @@
     border: 1px solid yellow;
 }
 
-.footer-right{
+
+
+.heading-footer{
     display: flex;
-    color: white;
-    justify-content: start;
-    align-items: start;
-    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-.footer-right i{
+.heading-footer i{
     font-size: 40px;
+    margin-right: 4px;
 }
+.heading-footer div a:hover{
+    color: lightgray;
+}
+.footer-right img{
+    width: 200px;
+    opacity: 0.5;
+
+}
+
 
 @media screen and (max-width:765px) {
        .footer-left div input,textarea{
@@ -66,6 +77,17 @@
 
     .footer-parent{
         flex-direction: column-reverse;
+    }
+ 
+}
+
+
+
+@media screen and (max-width:445px) {
+    .heading-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
     }
  
 }

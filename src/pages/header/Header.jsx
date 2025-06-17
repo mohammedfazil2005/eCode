@@ -3,6 +3,8 @@ import video from '../../assets/personVideo.mp4'
 import coder from '../../assets/coder.png'
 import './Header.css'
 import { Link } from 'react-router-dom'
+import Service from '../services/Service'
+import Footer from '../../components/footer/Footer'
 
 const Header = () => {
    
@@ -29,6 +31,10 @@ const Header = () => {
                 <img src={coder} alt="" className='coder-img' />
             </div>
         </div>
+
+        <Service/>
+        <hr style={{color:'white',marginTop:'40px'}}/>
+        <Footer/>
        
     
         </>

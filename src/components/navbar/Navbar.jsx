@@ -8,7 +8,7 @@ const Navbar = () => {
     <div>
       <nav class="navbar navbar-expand-lg container">
   <div class="container-fluid">
-    <Link class="navbar-brand" id='logo-png' to={'/'}>E-CODE</Link>
+    <Link class="navbar-brand" id='logo-png' to={'/'}>E-CODE <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="" /></Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
