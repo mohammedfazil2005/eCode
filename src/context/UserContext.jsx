@@ -5,7 +5,7 @@ export const UserContextAPI = createContext()
 
 const UserContext = ({ children }) => {
     const [isStored, setIsStored] = useState(true)
-
+    const [boxval,setBoxVal]=useState("")
     useEffect(() => {
         if (sessionStorage.getItem("user")) {
             setIsStored(true)
@@ -14,7 +14,7 @@ const UserContext = ({ children }) => {
         }
     }, [isStored])
     return (
-        <UserContextAPI.Provider value={{ isStored, setIsStored }}>
+        <UserContextAPI.Provider value={{ isStored, setIsStored,boxval,setBoxVal }}>
             {children}
         </UserContextAPI.Provider>
     )

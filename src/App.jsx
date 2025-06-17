@@ -6,6 +6,7 @@ import Patterns from "./pages/Patterns"
 
 
 function App() {
+  
 
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/patterns" element={<Patterns/>}/>
     </Routes>
+    <hr style={{color:'white',marginTop:'100px'}}/>
     <Footer/>
     </>
   )

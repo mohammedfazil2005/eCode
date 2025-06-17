@@ -1,30 +1,73 @@
 .patterns-content-parent{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap ;
+    gap: 10px;
 
 }
 
 .patterns-content-parent div{
     display: flex;
     flex-direction: column;
-}
-
-.patterns-content-parent div p {
-    letter-spacing: 10px;
     color: white;
+    border: 2px solid rgba(211, 211, 211, 0.337);
+    box-shadow: 0px 2px 3px #1e2227;
+    min-height: 50vh;
+    padding: 10px;
+    align-items: center;
+    justify-content: center ;
+    border-radius: 10px;
+    width: 500px;
+    cursor: pointer;
 }
 
-.patterns-content-parent div img{
-    width: 100px;
-    border-radius: 10px;
+.patterns-content-parent div:hover{
+    border: 1px solid rgba(255, 255, 0, 0.407);
 }
+
+@media screen and (max-width:535px) {
+    .patterns-content-parent div{
+        width: 100%;
+    }
+}
+
+.patterns-content-parent h1{
+    font-family:cursive;
+    font-weight: bold;
+}
+.patterns-content-parent h1 span{
+    color: yellow;
+    font-family: cursive;
+}
+
+.patterns-content-parent div button  {
+   display: flex;
+   align-items: center;
+   background-color: transparent;
+   margin-top: 10px;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    border: 1px solid rgba(211, 211, 211, 0.362);
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-family: cursive;
+}
+.patterns-content-parent div button img{
+    width: 15px;
+    height: 15px;
+   
+    
+}
+
 
 .custom-accordion .accordion-button,
 .custom-accordion .accordion-item,
 .custom-accordion .accordion-header {
   background-color: #1e2227;
   color: #fff;
-
+  letter-spacing: 1px;
   border: 1px solid rgba(211, 211, 211, 0.873);
   
 }
@@ -59,4 +102,26 @@
 .arrow-btn-div h6{
     color: white;
     font-weight: 300;
+}
+
+.btn-option-div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  
+    
+}
+.btn-option-div button{
+      padding: 8px;
+      background-color: transparent;
+      border: 1px solid lightgray;
+      color: white;
+      padding: 9px;
+      border-radius: 10px;
+}
+.btn-option-div button i{
+    margin-left: 10px;
+}
+.btn-option-div button:hover{
+    border: 1px solid yellow;
 }

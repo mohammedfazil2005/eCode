@@ -1,0 +1,71 @@
+.footer-parent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60PX;
+}
+
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.footer-left div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    
+}
+
+.footer-left div input,textarea{
+    background-color: transparent;
+    width: 600px;
+    border: 1px solid rgba(211, 211, 211, 0.204);
+    border-radius: 10px;
+    padding: 7px;
+    outline: none;
+    color: white;
+}
+
+.footer-left button{
+    margin: 20px 0px;
+    background-color: transparent;
+    padding: 8px;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    border: 2px solid rgba(211, 211, 211, 0.416);
+}
+
+.footer-left button:hover{
+    border: 1px solid yellow;
+}
+
+.footer-right{
+    display: flex;
+    color: white;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+}
+
+.footer-right i{
+    font-size: 40px;
+}
+
+@media screen and (max-width:765px) {
+       .footer-left div input,textarea{
+        width: 100%;
+}
+ 
+}
+
+@media screen and (max-width:503px) {
+
+    .footer-parent{
+        flex-direction: column-reverse;
+    }
+ 
+}
